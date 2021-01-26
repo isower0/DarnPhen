@@ -2,9 +2,7 @@
 include 'dbconfig.php';
 
 
-
-
-$sql = "SELECT * FROM `income_each_market`";
+$sql = "SELECT * FROM `income_each_market` ORDER BY `income` DESC limit 5";
 $result = mysqli_query($conn,$sql);
 
 

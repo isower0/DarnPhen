@@ -4,7 +4,7 @@ include 'dbconfig.php';
 
 $id_market = $_POST['id_market'];
 
-$sql = "SELECT * FROM `history_order` WHERE (`status` = 5 OR `status` = 6) AND `id_market` = '$id_market' ";
+$sql = "SELECT * FROM `history_order` WHERE (`status` = 5 OR `status` = 6) AND `id_market` = '$id_market' GROUP BY `id_product` ";
 $result = mysqli_query($conn,$sql);
 
 

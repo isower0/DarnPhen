@@ -1,7 +1,9 @@
 <?php
   
 include 'dbconfig.php';
+include 'uplloadconfig.php';
 
+$storage = new storage();
 
 
 
@@ -24,7 +26,7 @@ for ($i = 0; $i < count($file_names); $i++) {
     
   
 
-    if(move_uploaded_file($_FILES["file"]["tmp_name"][$i], $folderPath . $file_url)){
+    if($storage->uploadObject('images-market',$file_url,$_FILES["file"]["tmp_name"][$i])){
         
         /* $sql = "UPDATE `testimg` SET `img`= '$file_name',`date`='$pay_date' WHERE `id` =1"; */
         $sql = "UPDATE `payment` SET `image_slip`='$file_name',`datetime_payment`='$pay_date',`status`= 2 WHERE `id_order` = $id_order";

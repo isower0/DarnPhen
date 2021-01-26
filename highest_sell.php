@@ -4,7 +4,7 @@ include 'dbconfig.php';
 
 $id_market = $_POST['id_market'];
 
-$sql = "SELECT * FROM `count_sell_product` WHERE `id_market` = '$id_market'";
+$sql = "SELECT * FROM `count_sell_product` WHERE `id_market` = '$id_market' ORDER BY `count_sell_product`.`myCount` DESC";
 $result = mysqli_query($conn,$sql);
 
 
