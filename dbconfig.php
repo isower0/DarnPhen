@@ -3,10 +3,15 @@ header("Access-Control-Allow-Origin: *");
 /* header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");  */
 
-$host = 'localhost';
+/* $host = 'localhost';
 $username = 'root';
 $password = '';
 $dbname = 'appmarket'; 
+ */
+$host = 'localhost';
+$username = 'id15917053_isornhamali01';
+$password = 'J#eepza12218';
+$dbname = 'id15917053_appmarket'; 
 
 
 
